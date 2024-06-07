@@ -6,22 +6,18 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
        int sum = 0;
        int i = 0;
+       int countA=0;
+       int countB=0;
        while (i < skus.length()) {
-           if(i<=skus.length()-3 && skus.substring(i,i+3).equals("AAA")) {
-               sum+=130;
-               i+=3;
-           }
-           else if(i<=skus.length()-2 && skus.substring(i,i+2).equals("BB")) {
-               sum+=45;
-               i+=2;
-           }
-           else if(skus.charAt(i) == 'A'){
+           if(skus.charAt(i) == 'A'){
                sum+=50;
                i+=1;
+               countA++;
            }
            else if(skus.charAt(i) == 'B'){
                sum+=30;
                i+=1;
+               countB++;
            }
            else if(skus.charAt(i) == 'C'){
                sum+=20;
@@ -34,6 +30,8 @@ public class CheckoutSolution {
            else
                return -1;
        }
+       sum = sum - (countA/3) * 20 - (countB/2) * 15;
        return sum;
     }
 }
+
