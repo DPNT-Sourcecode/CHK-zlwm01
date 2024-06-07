@@ -50,11 +50,15 @@ public class CheckoutSolution {
                H++;
            }
            else if(skus.charAt(i) == 'I'){
-               sum+=135;
+               sum+= 35;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'J'){
+               sum+= 60;
                i+=1;
            }
            else if(skus.charAt(i) == 'K'){
-               sum+=60;
+               sum+=80;
                i+=1;
                K++;
            }
@@ -158,4 +162,5 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
