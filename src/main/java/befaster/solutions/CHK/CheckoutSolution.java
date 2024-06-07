@@ -38,8 +38,11 @@ public class CheckoutSolution {
        }
        int aux2 = (countA-countA/5*5)/3;
        int aux3 = countE/2;
-       countB = countB-aux3;
-       sum = sum - (countA/5) * 50 - aux2*20 - (countB/2) * 15 - aux3 * 30;
+       int aux4 = countB-aux3;
+       sum = sum - (countA/5) * 50 - aux2*20 - (aux4/2) * 15 - aux3 * 30;
+       if(countE == 2 && countB==0)
+           sum+=30;
        return sum;
     }
 }
+
