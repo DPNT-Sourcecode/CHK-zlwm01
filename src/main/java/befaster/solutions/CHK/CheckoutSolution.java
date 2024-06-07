@@ -9,6 +9,7 @@ public class CheckoutSolution {
        int countA=0;
        int countB=0;
        int countE=0;
+       int countF=0;
        while (i < skus.length()) {
            if(skus.charAt(i) == 'A'){
                sum+=50;
@@ -33,6 +34,11 @@ public class CheckoutSolution {
                i+=1;
                countE++;
            }
+           else if(skus.charAt(i) == 'F'){
+               sum+=10;
+               i+=1;
+               countF++;
+           }
            else
                return -1;
        }
@@ -42,7 +48,9 @@ public class CheckoutSolution {
        sum = sum - (countA/5) * 50 - aux2*20 - (aux4/2) * 15 - aux3 * 30;
        if(countE == 2 && countB==0)
            sum+=30;
+       sum = sum - countF/2*10;
        return sum;
     }
 }
+
 
