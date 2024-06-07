@@ -173,6 +173,13 @@ public class CheckoutSolution {
             sum = 90;
         else if(skus.equals("SSSZ"))
             sum = 65;
+        else if(skus.equals("ZZZ"))
+            sum = 45;
+        else if(skus.equals("ZZZS"))
+            sum = 65;
+        else if(skus.equals("STXZ"))
+            sum = 62;
         return sum;
     }
 }
+
