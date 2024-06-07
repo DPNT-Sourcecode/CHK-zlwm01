@@ -39,6 +39,82 @@ public class CheckoutSolution {
                i+=1;
                countF++;
            }
+           else if(skus.charAt(i) == 'G'){
+               sum+=20;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'H'){
+               sum+=10;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'I'){
+               sum+=135;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'K'){
+               sum+=60;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'L'){
+               sum+=90;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'M'){
+               sum+=15;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'N'){
+               sum+=40;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'O'){
+               sum+=10;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'P'){
+               sum+=50;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'Q'){
+               sum+=30;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'R'){
+               sum+=50;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'S'){
+               sum+=30;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'T'){
+               sum+=20;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'U'){
+               sum+=40;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'V'){
+               sum+=50;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'W'){
+               sum+=20;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'X'){
+               sum+=90;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'Y'){
+               sum+=10;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'Z'){
+               sum+=50;
+               i+=1;
+           }
            else
                return -1;
        }
@@ -52,6 +128,3 @@ public class CheckoutSolution {
        return sum;
     }
 }
-
-
-
