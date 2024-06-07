@@ -48,9 +48,10 @@ public class CheckoutSolution {
        sum = sum - (countA/5) * 50 - aux2*20 - (aux4/2) * 15 - aux3 * 30;
        if(countE == 2 && countB==0)
            sum+=30;
-       sum = sum - countF/2*10;
+       sum = sum - countF/3*10;
        return sum;
     }
 }
+
 
 
