@@ -58,7 +58,7 @@ public class CheckoutSolution {
                i+=1;
            }
            else if(skus.charAt(i) == 'K'){
-               sum+=80;
+               sum+=70;
                i+=1;
                K++;
            }
@@ -165,8 +165,9 @@ public class CheckoutSolution {
         int aux6 = (V-V/3*3)/2;
         sum = sum - (V/3) * 20 - aux6*10;
 
-        sum = sum - S+T+X+Y+Z/3 *15;
+        sum = sum - (S+T+X+Y+Z)/3 *15;
         return sum;
     }
 }
+
 
