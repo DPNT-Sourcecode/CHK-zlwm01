@@ -29,6 +29,9 @@ public class CheckoutSolution {
                 else if (aux == 'B'&& aux == c){
                     cont2+=1;
                     cont1 = 0;}
+                else {
+                    cont1=0;
+                    cont2=0;}
             if(cont1 ==3){
                 sum-=20;
                 cont1 = 0;}
@@ -40,5 +43,6 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
