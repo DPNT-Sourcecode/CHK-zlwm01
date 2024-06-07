@@ -10,6 +10,7 @@ public class CheckoutSolution {
        int countB=0;
        int countE=0;
        int countF=0;
+       int H=0, K=0, N=0, P=0, Q=0, R=0, U=0, V = 0, M=0;
        while (i < skus.length()) {
            if(skus.charAt(i) == 'A'){
                sum+=50;
@@ -46,6 +47,7 @@ public class CheckoutSolution {
            else if(skus.charAt(i) == 'H'){
                sum+=10;
                i+=1;
+               H++;
            }
            else if(skus.charAt(i) == 'I'){
                sum+=135;
@@ -54,6 +56,7 @@ public class CheckoutSolution {
            else if(skus.charAt(i) == 'K'){
                sum+=60;
                i+=1;
+               K++;
            }
            else if(skus.charAt(i) == 'L'){
                sum+=90;
@@ -62,10 +65,12 @@ public class CheckoutSolution {
            else if(skus.charAt(i) == 'M'){
                sum+=15;
                i+=1;
+               M++;
            }
            else if(skus.charAt(i) == 'N'){
                sum+=40;
                i+=1;
+               N++;
            }
            else if(skus.charAt(i) == 'O'){
                sum+=10;
@@ -74,14 +79,17 @@ public class CheckoutSolution {
            else if(skus.charAt(i) == 'P'){
                sum+=50;
                i+=1;
+               P++;
            }
            else if(skus.charAt(i) == 'Q'){
                sum+=30;
                i+=1;
+               Q++;
            }
            else if(skus.charAt(i) == 'R'){
                sum+=50;
                i+=1;
+               R++;
            }
            else if(skus.charAt(i) == 'S'){
                sum+=30;
@@ -94,10 +102,12 @@ public class CheckoutSolution {
            else if(skus.charAt(i) == 'U'){
                sum+=40;
                i+=1;
+               U++;
            }
            else if(skus.charAt(i) == 'V'){
                sum+=50;
                i+=1;
+               V++;
            }
            else if(skus.charAt(i) == 'W'){
                sum+=20;
@@ -125,6 +135,27 @@ public class CheckoutSolution {
        if(countE == 2 && countB==0)
            sum+=30;
        sum = sum - countF/3*10;
-       return sum;
+
+
+        int aux5 = (H-H/10*10)/5;
+        sum = sum - (H/10) * 5 - aux5*20 - K/2*10 ;
+
+        if(N/3<=M)
+            sum = sum - N/3*15;
+        else
+            sum = sum - M*15;
+
+        if(R/3<=Q){
+            sum = sum - R/3*30;
+            Q = Q-R/3;}
+        else{
+            sum = sum - Q*30;
+            Q = 0;}
+        sum = sum - P/5*50 - Q/3*10 - U/4*40;
+
+        int aux6 = (V-V/3*3)/2;
+        sum = sum - (V/3) * 20 - aux6*10;
+        return sum;
     }
 }
+
