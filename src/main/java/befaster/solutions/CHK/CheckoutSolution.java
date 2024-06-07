@@ -142,7 +142,7 @@ public class CheckoutSolution {
 
 
         int aux5 = (H-H/10*10)/5;
-        sum = sum - (H/10) * 5 - aux5*20 - K/2*10 ;
+        sum = sum - (H/10) * 20 - aux5*5 - K/2*10 ;
 
         if(N/3<=M)
             sum = sum - N/3*15;
@@ -162,5 +162,3 @@ public class CheckoutSolution {
         return sum;
     }
 }
-
-
