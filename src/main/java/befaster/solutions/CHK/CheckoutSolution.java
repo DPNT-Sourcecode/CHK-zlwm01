@@ -4,45 +4,40 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        int sum = 0;
-        int ok=0;
-        int cont1 =0;
-        int cont2 =0;
-        char aux = ' ';
-        for(char c: skus.toCharArray()) {
-            ok+=1;
-            if (c == 'A')
-                sum+=50;
-            else if (c == 'B')
-                sum+=30;
-            else if (c == 'C')
-                sum+=20;
-            else if (c == 'D')
-                sum+=15;
-            else
-                return -1;
-
-            if(ok>1)
-                if(aux == 'A' && aux == c){
-                    cont1+=1;
-                    cont2 = 0;}
-                else if (aux == 'B'&& aux == c){
-                    cont2+=1;
-                    cont1 = 0;}
-                else {
-                    cont1=0;
-                    cont2=0;}
-            if(cont1 ==3){
-                sum-=20;
-                cont1 = 0;}
-            if(cont2 ==2){
-                sum-=15;
-                cont2 = 0;}
-            aux = c;
-        }
-        return sum;
+       int sum = 0;
+       int i = 0;
+       while (i < skus.length()) {
+           if(i<=skus.length()-3 && skus.substring(i,i+3).equals("AAA")) {
+               sum+=130;
+               i+=3;
+           }
+           else if(i<=skus.length()-2 && skus.substring(i,i+2).equals("BB")) {
+               sum+=45;
+               i+=2;
+           }
+           else if(skus.charAt(i) == 'A'){
+               sum+=50;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'B'){
+               sum+=30;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'C'){
+               sum+=20;
+               i+=1;
+           }
+           else if(skus.charAt(i) == 'D'){
+               sum+=15;
+               i+=1;
+           }
+           else
+               return -1;
+       }
+       return sum;
     }
 }
+
 
 
 
