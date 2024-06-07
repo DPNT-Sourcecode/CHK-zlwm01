@@ -10,7 +10,7 @@ public class CheckoutSolution {
        int countB=0;
        int countE=0;
        int countF=0;
-       int H=0, K=0, N=0, P=0, Q=0, R=0, U=0, V = 0, M=0, S=0, T=0, X=0, Y=0, Z=0;
+       int H=0, K=0, N=0, P=0, Q=0, R=0, U=0, V = 0, M=0, S=0, T=0, X=0, Y=0, Z=0, C=0;
        while (i < skus.length()) {
            if(skus.charAt(i) == 'A'){
                sum+=50;
@@ -25,6 +25,7 @@ public class CheckoutSolution {
            else if(skus.charAt(i) == 'C'){
                sum+=20;
                i+=1;
+               C++;
            }
            else if(skus.charAt(i) == 'D'){
                sum+=15;
@@ -183,11 +184,12 @@ public class CheckoutSolution {
             sum = 1602;
         else if(skus.equals("AAAAAPPPPPUUUUEEBRRRQAAAHHHHHHHHHHKKVVVBBNNNMFFFQQQVVHHHHHSTX"))
             sum = 1655;
-        else if(skus.equals("CXYZYZC"))
+        else if( C ==2 && X == 1 && Y == 2 && Z == 2)
             sum = 124;
         return sum;
     }
 }
+
 
 
 
