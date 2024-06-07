@@ -15,11 +15,12 @@ public class CheckoutSolution {
             else if (c == 'D')
                 sum+=15;
             else
-                return 0;
+                return -1;
 
         }
         return sum;
     }
 }
+
 
 
